@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  StateMachine.cpp
+  main.cpp
+  AssetManager.cpp
+  Generating Code...
   SFML_Mastermind.vcxproj -> C:\Users\Dell\source\repos\SFML_Mastermind\Debug\SFML_Mastermind.exe
