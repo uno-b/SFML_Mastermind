@@ -1,5 +1,3 @@
-﻿  StateMachine.cpp
-  main.cpp
-  AssetManager.cpp
-  Generating Code...
+﻿  SplashState.cpp
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\game.h(27): warning C4305: 'initializing': truncation from 'double' to 'const float'
   SFML_Mastermind.vcxproj -> C:\Users\Dell\source\repos\SFML_Mastermind\Debug\SFML_Mastermind.exe
