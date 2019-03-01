@@ -22,7 +22,10 @@ namespace Mastermind
 
 		sf::Clock _clock;
 
-		sf::Texture _backgroundTexture;
 		sf::Sprite _background;
+
+		sf::Text _text;
+		int textAppearanceTime = 0;
+		bool disappear = false;
 	};
 }
