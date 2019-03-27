@@ -1,10 +1,10 @@
 #include "stdafx.h"
 #pragma once
 
+#include <sstream>
 #include "SplashState.h"
 #include "DEFINITIONS.h"
 #include "MainMenuState.h"
-#include <sstream>
 #include <iostream>
 
 namespace Mastermind
@@ -51,8 +51,9 @@ namespace Mastermind
 	{
 		if (_clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME)
 		{
-			_data->machine.AddState(StateRef(new MainMenuState(_data)),
-				true);
+			_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+
+			std::cout << "Go to main menu state." << std::endl;
 		}
 
 		if (!disappear)
@@ -62,8 +63,6 @@ namespace Mastermind
 				textAppearanceTime += TEXT_APPEARANCE_TIME * dt;
 
 				_text.setFillColor(sf::Color(255, 255, 255, textAppearanceTime));
-
-
 			}
 			else if (textAppearanceTime == 255 && _clock.getElapsedTime().asSeconds() > 5)
 			{

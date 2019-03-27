@@ -2,6 +2,10 @@
 #include "Game.h"
 #include "SplashState.h"
 
+#include <iostream>
+
+using namespace std;
+
 namespace Mastermind
 {
 	Game::Game(int width, int height, std::string title)
@@ -12,7 +16,7 @@ namespace Mastermind
 		_data->window.create(sf::VideoMode(width, height), title,
 			sf::Style::Close | sf::Style::Titlebar);
 
-		//_data->machine.AddState(StateRef(new SplashState(this->_data)));
+		_data->machine.AddState(StateRef(new SplashState(this->_data)));
 
 		_data->window.setFramerateLimit(30);
 
