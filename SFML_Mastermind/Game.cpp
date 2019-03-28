@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "SplashState.h"
+#include "States/SplashState.h"
 
 #include <iostream>
 

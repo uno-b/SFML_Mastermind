@@ -25,7 +25,7 @@ namespace Mastermind
 
 		_text.setFont(_data->assets.GetFont("KG Happy"));
 		_text.setString("This game was made\nfor everyone :)");
-		_text.setCharacterSize(72);
+		_text.setCharacterSize(60);
 		_text.setFillColor(sf::Color(255, 255, 255, 0));
 		_text.setOrigin(_text.getGlobalBounds().width / 2,
 			_text.getGlobalBounds().height / 2);

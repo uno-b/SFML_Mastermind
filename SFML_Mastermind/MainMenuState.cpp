@@ -26,8 +26,19 @@ namespace Mastermind
 		_playButton.setTexture(this->_data->assets.GetTexture("Play Button"));
 		_quitButton.setTexture(this->_data->assets.GetTexture("Quit Button"));
 
-		_playButton.setPosition(sf::Vector2f(50, 250));
-		_quitButton.setPosition(sf::Vector2f(50, 350));
+		_title.setOrigin(_title.getGlobalBounds().width / 2,
+			_title.getGlobalBounds().height / 2);
+		_playButton.setOrigin(_playButton.getGlobalBounds().width / 2,
+			_playButton.getGlobalBounds().height / 2);
+		_quitButton.setOrigin(_quitButton.getGlobalBounds().width / 2,
+			_quitButton.getGlobalBounds().height / 2);
+
+		_title.setPosition(sf::Vector2f(_data->window.getSize().x / 2,
+			_data->window.getSize().y / 5));
+		_playButton.setPosition(sf::Vector2f(_data->window.getSize().x / 2,
+			_data->window.getSize().y / 2.3));
+		_quitButton.setPosition(sf::Vector2f(_data->window.getSize().x / 2,
+			_data->window.getSize().y / 1.7));
 	}
 
 	void MainMenuState::HandleInput()
@@ -44,8 +55,8 @@ namespace Mastermind
 			if (_data->input.IsSpriteClicked(
 				_playButton, sf::Mouse::Left, _data->window))
 			{
-				//_data->machine.AddState(StateRef(new GameState(_data)),
-				//	true);
+				_data->machine.AddState(StateRef(new GameState(_data)),
+					true);
 
 				std::cout << "Go to game state." << std::endl;
 			}

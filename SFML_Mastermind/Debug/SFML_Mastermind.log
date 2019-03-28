@@ -1,10 +1,15 @@
-﻿  SplashState.cpp
+﻿  MainMenuState.cpp
 c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\game.h(27): warning C4305: 'initializing': truncation from 'double' to 'const float'
-c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\splashstate.cpp(33): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\splashstate.cpp(32): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\splashstate.cpp(63): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\splashstate.cpp(76): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-  MainMenuState.cpp
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\mainmenustate.cpp(37): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\mainmenustate.cpp(36): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\mainmenustate.cpp(39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\mainmenustate.cpp(38): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\mainmenustate.cpp(41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\mainmenustate.cpp(40): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  GameState.cpp
 c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\game.h(27): warning C4305: 'initializing': truncation from 'double' to 'const float'
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\gamestate.cpp(6): fatal error C1083: Cannot open include file: 'GrammarState.h': No such file or directory
+  Game.cpp
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\game.h(27): warning C4305: 'initializing': truncation from 'double' to 'const float'
+c:\users\dell\source\repos\sfml_mastermind\sfml_mastermind\game.cpp(3): fatal error C1083: Cannot open include file: 'States/SplashState.h': No such file or directory
   Generating Code...
-  SFML_Mastermind.vcxproj -> C:\Users\Dell\source\repos\SFML_Mastermind\Debug\SFML_Mastermind.exe
