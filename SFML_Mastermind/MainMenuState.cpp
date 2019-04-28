@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <sstream>
 #include "MainMenuState.h"
-//#include "GameState.h"
+#include "GameState.h"
 #include "DEFINITIONS.h"
 
 #include <iostream>
@@ -26,19 +26,12 @@ namespace Mastermind
 		_playButton.setTexture(this->_data->assets.GetTexture("Play Button"));
 		_quitButton.setTexture(this->_data->assets.GetTexture("Quit Button"));
 
-		_title.setOrigin(_title.getGlobalBounds().width / 2,
-			_title.getGlobalBounds().height / 2);
-		_playButton.setOrigin(_playButton.getGlobalBounds().width / 2,
-			_playButton.getGlobalBounds().height / 2);
-		_quitButton.setOrigin(_quitButton.getGlobalBounds().width / 2,
-			_quitButton.getGlobalBounds().height / 2);
-
-		_title.setPosition(sf::Vector2f(_data->window.getSize().x / 2,
-			_data->window.getSize().y / 5));
-		_playButton.setPosition(sf::Vector2f(_data->window.getSize().x / 2,
-			_data->window.getSize().y / 2.3));
-		_quitButton.setPosition(sf::Vector2f(_data->window.getSize().x / 2,
-			_data->window.getSize().y / 1.7));
+		_title.setPosition(sf::Vector2f(_data->window.getSize().x / 2 - (_title.getGlobalBounds().width / 2),
+			_data->window.getSize().y / 5 - (_title.getGlobalBounds().height / 2)));
+		_playButton.setPosition(sf::Vector2f(_data->window.getSize().x / 2 - (_playButton.getGlobalBounds().width / 2),
+			_data->window.getSize().y / 2.3 - (_playButton.getGlobalBounds().height / 2)));
+		_quitButton.setPosition(sf::Vector2f(_data->window.getSize().x / 2 - (_quitButton.getGlobalBounds().width / 2),
+			_data->window.getSize().y / 1.7 - (_quitButton.getGlobalBounds().height / 2)));
 	}
 
 	void MainMenuState::HandleInput()
@@ -47,24 +40,24 @@ namespace Mastermind
 
 		while (_data->window.pollEvent(event))
 		{
-			if (sf::Event::Closed == event.type)
-			{
-				_data->window.close();
-			}
+			if (event.type == sf::Event::MouseButtonReleased) {
+				if (sf::Event::Closed == event.type)
+				{
+					_data->window.close();
+				}
 
-			if (_data->input.IsSpriteClicked(
-				_playButton, sf::Mouse::Left, _data->window))
-			{
-				_data->machine.AddState(StateRef(new GameState(_data)),
-					true);
+				if (_data->input.IsSpriteClicked(_playButton, sf::Mouse::Left, _data->window))
+				{
+					_data->machine.AddState(StateRef(new GameState(_data)), true);
 
-				std::cout << "Go to game state." << std::endl;
-			}
+					std::cout << "Go to game state." << std::endl;
+				}
 
-			if (_data->input.IsSpriteClicked(
-				_quitButton, sf::Mouse::Left, _data->window))
-			{
-				_data->window.close();
+				if (_data->input.IsSpriteClicked(_quitButton, sf::Mouse::Left, _data->window))
+				{
+					std::cout << "Quit button clicked." << std::endl;
+					_data->window.close();
+				}
 			}
 		}
 	}

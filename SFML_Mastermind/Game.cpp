@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "States/SplashState.h"
+#include "SplashState.h"
 
 #include <iostream>
 
@@ -10,7 +10,7 @@ namespace Mastermind
 {
 	Game::Game(int width, int height, std::string title)
 	{
-
+		enum 
 		srand(time(NULL));
 
 		_data->window.create(sf::VideoMode(width, height), title,
